@@ -2,4 +2,6 @@ body {
     width: 90%;
     margin: auto;
 }
-
+.app h3{
+    text-align: center;
+}

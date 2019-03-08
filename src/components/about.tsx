@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 export default class About extends Component {
-    // constructor(){
-    //     super(props);
-    //     this.state = {
-    //         title: 'Home'
-    //     }
-    // };
+    constructor(props: any){
+        super(props);
+        this.state = {
+            title: 'Home'
+        }
+    };
 
     render() {
 
