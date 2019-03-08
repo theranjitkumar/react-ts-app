@@ -14,13 +14,13 @@ export default class AddPost extends Component<any, any> {
     };
 
     addPost() {
-        var title = document.getElementById('title');
-        var body = document.getElementById('title');
+        var title = ((document.getElementById("title") as HTMLInputElement).value);
+        var body = ((document.getElementById("body") as HTMLInputElement).value);
         var data: any = {
-            // title: title !== null || undefined ? title : 'Test Title',
-            // body: body !== null || undefined ? body : 'Test body ....'
-            title: 'Test Title',
-            body: 'Test body ....'
+            title: title !== null || undefined ? title : 'Test Title',
+            body: body !== null || undefined ? body : 'Test body ....'
+            // title: 'Test Title',
+            // body: 'Test body ....'
         };
         fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
