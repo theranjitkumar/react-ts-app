@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### To create react app in typescript
+    step 1. install cli: npm install -g create-react-app
+    step 2. create react app; npx create-react-app my-app --typescript
+
+
 ## Available Scripts
 
 In the project directory, you can run:
