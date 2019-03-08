@@ -32,7 +32,7 @@ export default class Posts extends Component<any, any> {
                 <hr />
                 <AddPost />
                 <hr />
-                <h3> {this.state.title}  </h3>
+                <h4> {this.state.title}  </h4>
                 <div>
                     {
                         this.state.posts.map((post:any) =>

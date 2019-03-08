@@ -14,7 +14,21 @@ export default class AddPost extends Component<any, any> {
     };
 
     addPost() {
-        console.log('post added');
+        var title = document.getElementById('title');
+        var body = document.getElementById('title');
+        var data: any = {
+            // title: title !== null || undefined ? title : 'Test Title',
+            // body: body !== null || undefined ? body : 'Test body ....'
+            title: 'Test Title',
+            body: 'Test body ....'
+        };
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).then(res => res.json())
+            .then(response => console.log(response))
+            .catch(err => console.error('Error:', err));
     }
 
     render() {
@@ -22,7 +36,7 @@ export default class AddPost extends Component<any, any> {
         return (
 
             <section>
-                <h3> {this.state.title}  </h3>
+                <h4> {this.state.title}  </h4>
                 <div>
                     <form>
                         <div>
@@ -37,8 +51,6 @@ export default class AddPost extends Component<any, any> {
                     </form>
                 </div>
             </section>
-
-
         )
 
     }
