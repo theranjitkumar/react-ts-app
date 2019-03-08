@@ -19,8 +19,6 @@ export default class AddPost extends Component<any, any> {
         var data: any = {
             title: title !== null || undefined ? title : 'Test Title',
             body: body !== null || undefined ? body : 'Test body ....'
-            // title: 'Test Title',
-            // body: 'Test body ....'
         };
         fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
