@@ -1,8 +1,12 @@
-import { combineReducers } from 'redux';
+import {createStore, combineReducers, Store } from 'redux';
 import { postReducer } from './posts/reducers'
 
 const rootReducer = combineReducers({
   post: postReducer
 })
 
-export type AppState = ReturnType<typeof rootReducer>
+const store = createStore(rootReducer)
+
+store.getState();
+
+export default  store; 
